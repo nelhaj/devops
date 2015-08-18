@@ -7,14 +7,14 @@
 FROM appcontainers/jenkins
 
 # File Author / Maintainer
-MAINTAINER Rich Nason naoufel.elhaj@gmail.com
+MAINTAINER Naoufel EL HAJ naoufel.elhaj@gmail.com
 
 #*************************
 #  Update git version    *
 #*************************
 RUN rpm -i 'http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm' \
 rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt \
-yum --disablerepo=base,updates --enablerepo=rpmforge-extras install git
+yum --enablerepo=rpmforge-extras install git
 
 #*************************
 #*  Update Java version  *
